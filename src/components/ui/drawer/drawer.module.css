@@ -1,0 +1,71 @@
+@property --x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: -100%;
+}
+
+.drawerOverlay{
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgba(0, 0, 0, 0.288);
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+
+.mobileStyles{
+  display: flex;
+}
+
+.desktopStyles{
+  display: none;
+}
+
+.drawerContainer{
+    background-color: #000000;
+    border-right: 1px solid #3e3e3e;
+    color: white;
+    height: 100%;
+    width: 60%;
+    margin-right: auto;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    transform: translateX(var(--x));
+}
+
+.openDrawer{
+    animation:openAnimation 500ms ease-in-out forwards;
+}
+
+@keyframes openAnimation{
+  0% {
+    --x: -100%;
+}
+  to{
+    --x: 0%;
+}
+}
+
+.closeDrawer{
+    animation:closeAnimation 300ms ease-in-out forwards;
+}
+
+@keyframes closeAnimation{
+  0% {
+    --x: 0%;
+}
+  100% {
+    --x:-100%;
+}
+}
+
+@media (min-width: 480px) {
+    .mobileStyles{
+    display: none;
+  }
+
+  .desktopStyles{
+    display: flex;
+  }
+}

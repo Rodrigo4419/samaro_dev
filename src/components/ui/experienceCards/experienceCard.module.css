@@ -1,0 +1,224 @@
+.experienceMap{
+    width: 100%;
+    margin: 2rem auto auto;
+    position: relative;
+    padding-left: 1.5rem;
+    opacity: 1;
+}
+
+.experienceCard{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 36rem;
+    padding: 2rem;
+    border: 1px solid #3e3e3e;
+    background-color: #9a9da42e;
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+    height: fit-content;
+    transition: all 0.5s ease-in-out;
+}
+
+.experienceCard:hover{
+    background-color: var(--card-background-hover);
+    border-color: var(--card-border-hover);
+}
+
+.experienceCard:hover h4{
+    color: var(--color-secondary);
+}
+
+.experienceCard:hover .chip{
+
+    color: var(--color-secondary);
+}
+
+.responsiveDate{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.dot{
+    height: 1rem;
+    width: 1rem;
+    background: white;
+    background-image: linear-gradient(90deg, #1c51f2 20%, #8da9ff 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.line{
+    height: 100%;
+    width: 2.5px;
+    background-color: white;
+    background-image: linear-gradient(0deg, #1c51f2 50%, #8da9ff 100%);
+    position: absolute;
+    left: 0.45rem;
+    top: 1.5rem;
+}
+
+.experienceCard h4{
+    line-height:1.3rem;
+    font-size: 1.5rem;
+    display: grid;
+    gap: 0.5rem;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.currentChip{
+    width: fit-content;
+    font-size: 0.875rem;
+    line-height: normal;
+    color: #4aff80;
+    background-color: #5cff0024;
+    padding: .2rem .5rem;;
+    font-weight: 500;
+    border-radius: 25px;
+    height: fit-content;
+}
+
+.subtitleCard{
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.dateCard{
+    display: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.lapseCard{
+    display: none;
+    margin-top: 0.25rem;
+    text-align: end;
+    color: var(--text-secondary);
+}
+
+.descriptionCard{
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.experienceCard h5{
+    font-size: 1.125rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.listContainer p{
+        font-size: 0.875rem;
+    }
+
+.listItem{
+    display: flex;
+    gap: 0.75rem;
+}
+
+.listDot{
+    margin-top: 0.4rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.chipContainer{
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.chip{
+    padding: 0.25rem 0.8rem;
+    background-color: #ffffff12;
+    width: fit-content;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.5s ease-in-out ;
+}
+
+@media (min-width: 480px) {
+
+    .experienceMap{
+        width: fit-content;
+        padding-left: 4rem;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .dot{
+        left: 1.5rem;
+    }
+
+    .line{
+        top: 2rem;
+        left: 1.95rem;
+    }
+
+    .experienceCard{
+        width: 68rem;
+    }
+
+    .experienceCard h4{
+        gap: 1rem;
+        display: flex;
+        line-height: normal;
+    }
+
+    .currentChip{
+        /* width: fit-content; */
+        padding: .25rem .5rem;
+        font-size: 0.9rem;
+        line-height: 0.875rem;
+    }
+
+    .responsiveDate{
+        display: none;
+    }
+
+    .dateCard{
+        display: block;
+    }
+
+    .lapseCard{
+        display: block;
+    }
+
+    .subtitleCard{
+        font-size: 1.125rem;
+    }
+
+    .descriptionCard{
+        font-size: 1.125rem;
+    }
+
+    .listContainer{
+        display: grid;
+        flex-direction: row;
+    }
+
+    .listContainer p{
+        font-size: 1rem;
+    }
+}

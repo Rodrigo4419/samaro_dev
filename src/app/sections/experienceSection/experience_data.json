@@ -1,0 +1,53 @@
+[
+  {
+    "company": "Riemann Annalytics",
+    "subtitle": "Front End Developer, Mexico, Mexico City (remote)",
+    "chip": "Current Role",
+    "description": "Riemann Analytics is a software company focused on Data Scienceprojects. I currently work with them as a Front-End Developer, supporting the team whenever they have projects that require complexuser interfaces",
+    "achievements": [
+      "Using Figma, I designed all the mockups we presented to clientsand later translated them into code.",
+      "Collaborated in the development of a real-time call recording and transcription tool, debugging and testing the audio transcription in real time.",
+      "Collaborated in the design and deployment of new modules for asurety insurance hiring platform using Next.js."
+    ],
+    "techList": ["React", "Typescript", "Python", "Next.js", "AWS"],
+    "date": "Jan 2025 - Present",
+    "dateSub": "Present"
+  },
+  {
+    "company": "Tycho Solutions",
+    "subtitle": "Front End Developer, Mexico, Mexico City (remote)",
+    "chip": "Promoted",
+    "description": "Designed and implemented advanced React components for the Quadrant SaaS platform, enabling new functionalities, improving the user experience, and collaborating effectively with cross-country teams throughout the development process.",
+    "achievements": [
+      "Led the Front End developent of Tycho solutions.",
+      "Successfully developed a proprietary visualization interface with deck.gl to display custom georeferenced data from Carto.",
+      "Collaborated in designing REST API endpoints for the platform along with the Backend development team.",
+      "Design and Developed a complete module to upload, share, and download georeferenced data in .geojson, .kmz and .kml formats, using AWS S3 and DynamoDB services"
+    ],
+    "techList": [
+      "React",
+      "Javascript",
+      "Python",
+      "Material UI",
+      "Deck.gl",
+      "Mapbox",
+      "Flask",
+      "AWS"
+    ],
+    "date": "Apr 2021 - Dec 2024",
+    "dateSub": "3 years 8 months"
+  },
+  {
+    "company": "Krystal Cancun Hotel",
+    "subtitle": "IT Auxiliary, Mexico, Cancún",
+    "chip": "Promoted",
+    "description": "As part of my professional practice, I worked 4 months as an IT assistant and IT support at Krystal Cancun Hotel.",
+    "achievements": [
+      "Succesfully developed a web based inventory software (React.js).",
+      "Collaborated on the configuration and maintenance of routers, antennas, and servers."
+    ],
+    "techList": ["React", "Javascript", "Firebase"],
+    "date": "Jan 2020 - Apr 2020",
+    "dateSub": "4 months"
+  }
+]

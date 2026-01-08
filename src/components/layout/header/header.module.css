@@ -1,0 +1,139 @@
+.header{
+    height: 4.4rem;
+    overflow: hidden;
+    position: fixed;
+    z-index: 5;
+    width: 100dvw;
+    border-bottom: 1px solid transparent;
+    animation-name: slideHeader;
+    animation-duration: 1s;
+    /* transform: translateY(-100%); */
+    transition: all 0.3s;
+}
+
+.header a{
+    width: 100%;
+}
+
+.header h2{
+    -webkit-text-fill-color: transparent;
+    color: #0000;
+    background-image: linear-gradient(90deg, #1c51f2 0%, #8da9ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.header button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #3e3e3e;
+    padding: 0.375rem;
+    border-radius: 6px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    /* top: 50%;
+    transform: translateY(-50%); */
+}
+
+.navContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    width: 100dvw;
+    margin: 0;
+    padding: 1.4rem 1.5rem;
+    align-items: center;
+}
+
+/* .navContainer nav{
+    flex-direction: row;
+} */
+
+.navContainer ul{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.navContainer li{
+    cursor: pointer;
+}
+
+.navContainer li:hover .hoverMarker{
+    width: 100%;
+}
+
+.top{
+    background-color: transparent;
+}
+
+.transparent{
+    background-color: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #3e3e3e;
+    backdrop-filter: blur(24px);
+}
+
+.hoverMarker{
+    display: none;
+    width: 0%;
+    height: 2px;
+    background-image: linear-gradient(90deg, #1c51f2 0%, #8da9ff 100%);
+    margin-top: 0.3rem;
+    transition: all 0.3s;
+}
+
+@keyframes slideHeader {
+  from {transform: translateY(-100%);}
+  to {transform: translateY(0%);}
+}
+
+@media (min-width: 480px) {
+  /* teléfonos pequeños */
+
+  .header{
+    height: fit-content;
+}
+
+.header a{
+    width: fit-content;
+}
+
+.navContainer{
+    flex-direction: row;
+    max-width: 80dvw;
+    margin: auto;
+}
+
+  .navContainer nav{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    margin: auto;
+}
+
+.navContainer ul{
+    font-size: 1rem;
+    margin-top: 0rem;
+    flex-direction: row;
+    text-align: left;
+}
+
+.hoverMarker{
+    display: block;
+}
+
+.header button{
+    display: none;
+}
+
+}
