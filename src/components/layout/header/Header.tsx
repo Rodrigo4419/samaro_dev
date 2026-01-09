@@ -20,7 +20,7 @@ export default function Header() {
     const isCollapsed =
       header.style.height === "4.4rem" || !header.style.height;
 
-    header.style.height = isCollapsed ? "19.4rem" : "4.4rem";
+    header.style.height = isCollapsed ? "20.4rem" : "4.4rem";
     header.style.backgroundColor = "#000000d9";
     header.style.borderBottom = "1px solid #3e3e3e";
   };
