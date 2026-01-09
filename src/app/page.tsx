@@ -1,15 +1,19 @@
-import { HomeSection, About, Projects, Experience, Connect} from "./sections";
-import styles from "./page.module.css";
+import { HomeSection, About, Projects, Experience, Connect } from "./sections";
+import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footer/Footer";
+import Stars from "@/components/common/Stars";
 
 export default function Home() {
-
   return (
     <>
-        <HomeSection/>
-        <About/>
-        <Projects/>
-        <Experience/>
-        <Connect/>
+      <Header />
+      <Stars />
+      <HomeSection />
+      <About />
+      <Projects />
+      <Experience />
+      <Connect />
+      <Footer />
     </>
   );
 }

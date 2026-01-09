@@ -10,17 +10,21 @@ export default function Stars() {
     if(!canvas){
         return
     }
+    //@ts-ignore
     const ctx = canvas.getContext("2d");
-
+     //@ts-ignore
     const stars = [];
     const starCount = 200;
-
+     //@ts-ignore
     canvas.width = window.innerWidth;
+     //@ts-ignore
     canvas.height = window.innerHeight;
 
     for (let i = 0; i < starCount; i++) {
       stars.push({
+         //@ts-ignore
         x: Math.random() * canvas.width,
+         //@ts-ignore
         y: Math.random() * canvas.height,
         r: Math.random() * 1,
         a: Math.random(),
@@ -29,9 +33,10 @@ export default function Stars() {
     }
 
     function animate() {
+       //@ts-ignore
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "white";
-
+       //@ts-ignore
       stars.forEach(star => {
         star.a += star.speed;
         const opacity = 0.5 + Math.sin(star.a) * 0.5;

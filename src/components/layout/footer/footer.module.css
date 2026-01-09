@@ -1,7 +1,7 @@
 .sectionContainer{
     width: 100dvw;
+    margin-left: -24px;
     background-color: #000;
-    margin-bottom: -48px;
     border-top: 1px solid #3e3e3e;
     height: fit-content;
     padding: 2rem 1.5rem;
@@ -124,7 +124,7 @@
 
 .sectionContainer{
     padding: 4rem 1.5rem;
-    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 .sectionContainer h3{

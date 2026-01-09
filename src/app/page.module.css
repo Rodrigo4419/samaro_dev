@@ -24,16 +24,13 @@
 
 .main {
   display: flex;
+  padding: 0px 24px;
   min-height: 100vh;
   height: fit-content;
   width: 100dvw;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  /* background-color: var(--foreground); */
-  /* background: #322B78; */
-  /* background: linear-gradient(0deg,rgba(50, 43, 120, .25) 0%, rgba(0, 0, 0, .25) 100%); */
-  /* padding: 120px 60px; */
 }
 
 .backgroundGradient{
@@ -43,6 +40,75 @@
   position: fixed;
   pointer-events: none;
   z-index: -1;
+}
+
+.notFoundMain{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+.notFoundMain section{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
+
+.label404{
+    width: fit-content;
+    margin: auto;
+    font-size: 6rem;
+    background-image: linear-gradient(90deg, #1c51f2 0%, #8da9ff 50%, #ca4af9 100%);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    line-height: 5rem !important;
+}
+
+.notFoundMain h2{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.notFoundMain p{
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.notFoundMain a{
+  width: fit-content;
+  margin: 1rem auto;
+  font-size: 1rem;
+  font-weight: 500;
+  background-image: linear-gradient(90deg, #8da9ff 0%, #1c51f2 100%);
+  padding: 0.74rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.earth{
+position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.moon{
+  color: transparent;
+  position: absolute;
+  left: 0;
+  bottom: -440px;
 }
 
 
@@ -60,10 +126,49 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .main {
-    padding: 48px 24px;
+    padding: 0rem;
   }
+
+  .notFoundMain{
+    position: relative;
+  }
+
+  .label404{
+    font-size: 10rem;
+    line-height: 8rem !important;
+}
+
+.notFoundMain h2{
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.notFoundMain p{
+  padding: 0 1rem;
+  margin-top: 1rem;
+  font-size: 1.275rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.notFoundMain a{
+  margin: 1.5rem auto;
+  font-size: 1.2rem;
+}
+
+.earth{
+  top: 5rem;
+  right: 5rem;
+}
+
+.moon{
+  color: transparent;
+  position: absolute;
+  left: 0;
+  bottom: -318px;
+}
 }
 
 /* @media (prefers-color-scheme: dark) {

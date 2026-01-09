@@ -2,6 +2,7 @@
     height: 4.4rem;
     overflow: hidden;
     position: fixed;
+    left: 0;
     z-index: 5;
     width: 100dvw;
     border-bottom: 1px solid transparent;
