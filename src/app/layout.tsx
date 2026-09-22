@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { generateSchema } from "@/lib/schema";
 import styles from "./page.module.css";
 import "./globals.css";
 
@@ -14,18 +15,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://spacexmissioncontrol.vercel.app"),
-  title: "SamaroDev",
-  description: "Frontend developer for personal and professional projects",
-
+  metadataBase: new URL("https://samaro-dev.vercel.app"),
+  title: "Samaro-dev | Frontend development services",
+  description: "Frontend-focused web development services. Bring your professional projects to life with my web development and consulting services.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    url: "",
+    url: "/",
     type: "website",
     title: "Frontend Developer based in Mexico",
     description: "Custom websites four your personal and proffesional proyects",
+    siteName:"samaro-dev",
     images: [
       {
-        url: "/proyectScreens/meta-img.png",
+        url: "/meta-img.png",
+        width: 1200,
+        height: 630,
+        alt: "Samaro Dev frontend development solutions - Rodrigo Mtz.",
       },
     ],
   },
@@ -35,7 +42,12 @@ export const metadata: Metadata = {
     title: "Frontend Developer",
     description: "Custom websites four your personal and proffesional proyects",
     creator: "Rodrigo Martínez",
-    images: ["/proyectScreens/meta-img.png"],
+    images: ["/meta-img.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -44,8 +56,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = JSON.stringify(generateSchema()).replace(/</g, "\\u003c");
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.backgroundGradient} />
         <main className={`${styles.page} ${styles.main}`}>{children}</main>
